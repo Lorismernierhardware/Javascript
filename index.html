@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<HEAD>
+    <SCRIPT type="text/Javascript">
+    function Loris()
+    {
+    // 3° transfert de la valeur du champ texte d'entrée vers variable d'entrée
+    r = parseFloat(document.vol_r.r.value);
+    //calcul
+    aire=4*Math.PI*Math.pow(r,2);
+    volume= 4/3* Math.PI*Math.pow(r,3);
+
+    // 5° Transfert du résultat de ma variable de sortie vers le champ texte de sortie
+    document.vol_r.aire.value = aire;
+    document.vol_r.volume.value = volume;
+
+    }
+    </SCRIPT>
+</HEAD>
+<body>
+    <SCRIPT type='text/Javascript'>
+    //Déclaration des variables 
+    var r;
+    var aire;
+    var volume;
+    
+    //Création du formulaire
+    document.write("<FORM name='vol_r'><br><br>");
+    document.write("Formulaire qui calcule le volume et l'aire<br><br>");
+    document.write("valeur du rayon:<INPUT type='text' name='r' size='10'><br><br>");
+    document.write("<INPUT type='button' name='boutton' value='Clique pour calculer ceci !' OnClick='Loris()'><br><br>");
+    document.write("valeur de l'aire:<INPUT type='text' name='aire' size='10' Readonly ><br><br>");
+    document.write("valeur du volume:<INPUT type='text' name='volume' size='10' Readonly>");
+    document.write("</FORM>");
+    </SCRIPT>
+</body>
+</html>
